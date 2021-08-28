@@ -1,0 +1,79 @@
+﻿@page
+@model Nomina.Pages.NominaModel
+
+<div class="text-center">
+    <h1 class="display-4">Nomina</h1>
+</div>
+
+<div class="card">
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table class="table table-bordered table-striped table-responsive">
+            <thead>
+                <tr>
+                    <th>
+                        Nombres
+                    </th>
+                    <th>
+                        Apellidos
+                    </th>
+                    <th>
+                        Cargo
+                    </th>
+                    <th>
+                        Salario Mensual
+                    </th>
+                    <th>
+                        Descuento Afp
+                    </th>
+                    <th>
+                        Descuento Ars
+                    </th>
+                    <th>
+                        Descuento Isr
+                    </th>
+                    <th>
+                        Total Descuentos
+                    </th>
+                    <th>
+                        Salario Neto
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.UserList)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nombres)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Apellidos)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cargo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SalarioMensual)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DescuentoAfp)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DescuentoArs)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DescuentoIsr)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TotalDescuentos)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SalarioNeto)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
